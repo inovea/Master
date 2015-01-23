@@ -12,6 +12,8 @@ package physique;
 public class FactoryPhysique {
     static ContainerServicesImpl containerSrv;
     static AlertServicesImpl alertSrv;
+    static CircuitServicesImpl circuitSrv;
+    static SteedServicesImpl steedSrv;
     
     public static ContainerServicesImpl getContainerSrv(){
         if(containerSrv == null){
@@ -25,6 +27,20 @@ public class FactoryPhysique {
             alertSrv = new AlertServicesImpl();
         }
         return alertSrv;
+    }
+    
+    public static CircuitServicesImpl getCircuitSrv(){
+        if(circuitSrv == null){
+            circuitSrv = new CircuitServicesImpl();
+        }
+        return circuitSrv;
+    }
+    
+    public static SteedServicesImpl getSteedSrv(){
+        if(steedSrv == null){
+            steedSrv = new SteedServicesImpl();
+        }
+        return steedSrv;
     }
     
 }
